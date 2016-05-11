@@ -1,14 +1,15 @@
 
 function addTitles() {
     for (var level = 1; level < 7; level++) {
-        var title = createTitle(level);
+        var text = 'Title Level' + level;
+        var title = createTitle(level, text);
         document.body.appendChild(title);
     }
 }
 
-function createTitle(level) {
+function createTitle(level, text) {
     var title = document.createElement('h' + level);
-    title.innerHTML = 'Title Level ' + level;
+    title.innerHTML = text;
     return title;
 }
 
